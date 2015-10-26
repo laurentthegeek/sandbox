@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Upload</title>
+    </h:head>
+    <h:body>
+        <p:messages showDetail="true"/>
+        <h:form enctype="multipart/form-data" rendered="#{!file.hasFile}">
+            <!-- No doc uploaded: show upload panel -->
+            <h:outputText value="Select the files to upload (max 2MB):" />
+            <p:fileUpload value="#{file.upFile}" mode="simple" />
+            <h:commandButton value="Upload" actionListener="#{file.upload}" />
+        </h:form>
+        <h:form rendered="#{file.hasFile}">
+            <!-- File uploaded: show doc details -->
+            <h:panelGrid columns="4" border="1">
+                <h:outputLabel value="Name" />
+                <h:outputLabel value="Type" />
+                <h:outputLabel value="Size" />
+                <h:outputLabel value="Action" />
+                <h:outputLabel value="#{doc.fileName}" />
+                <h:outputLabel value="#{doc.contentType}" />
+                <h:outputLabel value="#{doc.length}" />
+                <h:panelGroup layout="block">
+                    <h:commandButton value="Clear" actionListener="#{file.clear}"/>
+                </h:panelGroup>
+            </h:panelGrid>
+        </h:form>
+        <h:form>
+            <h:commandButton value="Next" action="/process.xhtml?faces-redirect=true" disabled="#{!workflow.isProcessReady}" />
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<listOfOrder xmlns="http://laurent.com/simple/v2009_09.xsd" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#">
+    <merchant>
+        <url>http://laurent.com/</url>
+    </merchant>
+    <merchant>
+        <url>http://laurent.com/</url>
+    </merchant>
+    <merchant>
+        <url>http://laurent.com/</url>
+    </merchant>
+    <buyer>
+        <ip>0.0.0.0</ip>
+    </buyer>
+    <buyer>
+        <ip>0.0.0.0</ip>
+    </buyer>
+    <buyer>
+        <ip>0.0.0.0</ip>
+    </buyer>
+    <purchaseOrder>
+        <merchant>
+            <url>http://laurent.com/</url>
+        </merchant>
+        <buyer>
+            <ip>0.0.0.0</ip>
+        </buyer>
+        <amount currency="AED">0.0</amount>
+        <country>ABW</country>
+    </purchaseOrder>
+    <purchaseOrder>
+        <merchant>
+            <url>http://laurent.com/</url>
+        </merchant>
+        <buyer>
+            <ip>0.0.0.0</ip>
+        </buyer>
+        <amount currency="AED">0.0</amount>
+        <country>ABW</country>
+    </purchaseOrder>
+    <purchaseOrder>
+        <merchant>
+            <url>http://laurent.com/</url>
+        </merchant>
+        <buyer>
+            <ip>0.0.0.0</ip>
+        </buyer>
+        <amount currency="AED">0.0</amount>
+        <country>ABW</country>
+    </purchaseOrder>
+    <ns2:Signature>
+        <ns2:SignedInfo>
+            <ns2:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            <ns2:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+            <ns2:Reference Type="http://www.w3.org/2000/09/xmldsig#Manifest">
+                <ns2:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                <ns2:DigestValue>bGF1cmVudHRoZWdlZWs=</ns2:DigestValue>
+            </ns2:Reference>
+        </ns2:SignedInfo>
+        <ns2:SignatureValue>bGF1cmVudHRoZWdlZWs=</ns2:SignatureValue>
+    </ns2:Signature>
+</listOfOrder>

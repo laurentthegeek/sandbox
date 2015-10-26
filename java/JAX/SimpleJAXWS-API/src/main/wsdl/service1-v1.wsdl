@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="service1-v1"
+             targetNamespace="http://laurent.com/simplejaxws/service1/v1.wsdl"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:v1_0="http://laurent.com/simplejaxws/service1/v1_0.xsd"
+             xmlns:tns="http://laurent.com/simplejaxws/service1/v1.wsdl"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <types>
+        <schema targetNamespace="http://laurent.com/simplejaxws/service1/v1_0.xsd"
+                xmlns:cmm="http://laurent.com/simplejaxws/common/v1.xsd"
+                xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://laurent.com/simplejaxws/common/v1.xsd"
+                    schemaLocation="common-v1.xsd" />
+            <element name="echo">
+                <complexType>
+                    <sequence>
+                        <element name="request" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="echoResponse">
+                <complexType>
+                    <sequence>
+                        <element name="response" type="string"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="errorInfo" type="cmm:ErrorInfo" />
+        </schema>
+    </types>
+
+    <message name="echo">
+        <part element="v1_0:echo" name="input" />
+    </message>
+    <message name="echoResponse">
+        <part element="v1_0:echoResponse" name="output" />
+    </message>
+    <message name="userFaultException">
+        <part element="v1_0:errorInfo" name="fault" />
+    </message>
+    <message name="systemFaultException">
+        <part element="v1_0:errorInfo" name="fault" />
+    </message>
+
+    <portType name="echoPort">
+        <operation name="echo">
+            <input name="echo" message="tns:echo"/>
+            <output name="echoResponse" message="tns:echoResponse"/>
+            <fault name="userFault" message="tns:userFaultException"/>
+            <fault name="systemFault" message="tns:systemFaultException"/>
+        </operation>
+    </portType>
+
+    <binding  name="echoPort_v1_0_SOAPBinding" type="tns:echoPort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="echo">
+            <soap:operation soapAction="echo"/>
+            <input name="echo">
+                <soap:body use="literal"/>
+            </input>
+            <output name="echoResponse">
+                <soap:body use="literal"/>
+            </output>
+            <fault name="systemFault">
+                <soap:fault name="systemFault" use="literal" />
+            </fault>
+            <fault name="userFault">
+                <soap:fault name="userFault" use="literal"  />
+            </fault>
+        </operation>
+    </binding>
+
+    <service name="EchoService">
+        <port name="echoPort" binding="tns:echoPort_v1_0_SOAPBinding">
+            <soap:address location="http://laurent.com/simplejaxws/service1/v1"/>
+        </port>
+    </service>
+</definitions>
+

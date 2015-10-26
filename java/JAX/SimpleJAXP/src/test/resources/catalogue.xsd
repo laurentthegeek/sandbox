@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://laurentthegeek/catalogue.xsd"
+           xmlns:tns="http://laurentthegeek/catalogue.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:simpleType name="Prix">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Genre">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Informatique"/>
+            <xs:enumeration value="Fantastique"/>
+            <xs:enumeration value="Horreur"/>
+            <xs:enumeration value="Romance"/>
+            <xs:enumeration value="Science Fiction"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="catalogue">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:livre" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="livre">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="auteur" type="xs:string"/>
+                <xs:element name="titre" type="xs:string"/>
+                <xs:element name="genre" type="tns:Genre"/>
+                <xs:element name="prix" type="tns:Prix"/>
+                <xs:element name="date_publication" type="xs:date"/>
+                <xs:element name="description" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

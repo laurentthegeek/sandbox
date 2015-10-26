@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    * Option 1: Environment
+
+Add in the META-INF/context.xml
+<Context>
+  <Environment name="jndiName" override="false" type="java.lang.String" value="${propname}"/>
+
+Add in the Tomcat/catalina.properties
+    foobar=foo bar from catalina.properties
+
+* Option 2: ResourceLink
+
+Add in the META-INF/context.xml
+<Context>
+  <ResourceLink name="jndiName" global="globalJndiName" type="java.lang.String"/>
+
+Add in the Tomcat/server.xml
+<GlobalNamingResources>
+    <Environment name="globalJndiName"
+        type="java.lang.String"
+        value="my value"
+        override="false" />
+</GlobalNamingResources>
+-->
+<Context path="/LoggingListener-1.0-SNAPSHOT">
+  <Environment name="log4j.test" override="false" type="java.lang.String" value="foobar"/>
+  <Environment name="log4j.test2" override="false" type="java.lang.String" value="${foobar}"/>
+  <ResourceLink global="webapp/log4j.configuration" name="log4j.configuration" type="java.lang.String"/>
+  <ResourceLink global="webapp/log4j.watch" name="log4j.watch" type="java.lang.Boolean"/>
+</Context>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+    <action>
+        <actionName>CUSTOM-cargo:deploy</actionName>
+        <displayName>cargo:deploy</displayName>
+        <goals>
+            <goal>cargo:deploy</goal>
+        </goals>
+    </action>
+    <action>
+        <actionName>CUSTOM-cargo:redeploy</actionName>
+        <displayName>cargo:redeploy</displayName>
+        <goals>
+            <goal>cargo:redeploy</goal>
+        </goals>
+    </action>
+    <action>
+        <actionName>CUSTOM-cargo:undeploy</actionName>
+        <displayName>cargo:undeploy</displayName>
+        <goals>
+            <goal>cargo:undeploy</goal>
+        </goals>
+    </action>
+</actions>

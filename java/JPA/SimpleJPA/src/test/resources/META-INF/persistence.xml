@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+    <persistence-unit name="mypu1" transaction-type="RESOURCE_LOCAL">
+        <!-- EclipseLink -->
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <!-- Hibernate -->
+        <!--<provider>org.hibernate.ejb.HibernatePersistence</provider>-->
+
+        <class>jpa.common.Country</class>
+        <class>jpa.common.CountryRef</class>
+        <class>jpa.project.Address</class>
+        <class>jpa.project.Customer</class>
+        <class>jpa.project.Project</class>
+        <class>jpa.project.Task</class>
+        <class>jpa.project.Worker</class>
+        <class>jpa.tree.Leaf</class>
+        <class>jpa.tree.Node</class>
+        <class>jpa.tree.Root</class>
+        <class>jpa.tree.Record</class>
+        <properties>
+            <!-- JPA Provider -->
+            <!-- EclipseLink -->
+            <property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+            <property name="eclipselink.application-location" value="target/" />
+            <property name="eclipselink.ddl-generation.output-mode" value="both" />
+            <property name="eclipselink.create-ddl-jdbc-file-name" value="create.sql" />
+            <property name="eclipselink.drop-ddl-jdbc-file-name" value="drop.sql" />
+            <!-- Hibernate -->
+            <!--<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />-->
+
+            <!-- SQL Databse -->
+            <!-- Derby Embedded -->
+            <!--<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby:target/mydb1;create=true" />-->
+            <!-- Derbug Network -->
+            <!--<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/mydb1;create=true"/>
+            <property name="javax.persistence.jdbc.user" value="nbuser"/>
+            <property name="javax.persistence.jdbc.password" value="password"/>-->
+            <!-- HyperSQL -->
+            <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:testdb" />
+            <property name="javax.persistence.jdbc.user" value="SA" />
+            <property name="javax.persistence.jdbc.password" value="" />
+        </properties>
+    </persistence-unit>
+
+</persistence>

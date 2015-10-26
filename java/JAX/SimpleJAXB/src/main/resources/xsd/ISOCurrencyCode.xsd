@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://laurent.com/simple/v2009_09.xsd"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+
+    <simpleType name="ISOCurrencyCode">
+        <annotation>
+            <documentation>ISO 4217 Currency Alphabetic Code</documentation>
+        </annotation>
+        <restriction base="NMTOKEN">
+            <enumeration value="AED">
+                <annotation>
+                    <documentation>Dirham</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="AFN">
+                <annotation>
+                    <documentation>Afghani</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ALL">
+                <annotation>
+                    <documentation>Lek</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="AMD">
+                <annotation>
+                    <documentation>Dram</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ANG">
+                <annotation>
+                    <documentation>Netherlands Antillian Guilder</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="AOA">
+                <annotation>
+                    <documentation>Kwanza</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ARS">
+                <annotation>
+                    <documentation>Argentine Peso</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="AUD">
+                <annotation>
+                    <documentation>Australian Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="AWG">
+                <annotation>
+                    <documentation>Aruban Guilder</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="AZN">
+                <annotation>
+                    <documentation>Azerbaijanian Manat</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BAM">
+                <annotation>
+                    <documentation>Convertible Mark</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BBD">
+                <annotation>
+                    <documentation>Barbados Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BDT">
+                <annotation>
+                    <documentation>Taka</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BGN">
+                <annotation>
+                    <documentation>Bulgarian Lev</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BHD">
+                <annotation>
+                    <documentation>Bahraini Dinar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BIF">
+                <annotation>
+                    <documentation>Burundi Franc</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BMD">
+                <annotation>
+                    <documentation>Bermudian Dollar (customarily: Bermuda Dollar)</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BND">
+                <annotation>
+                    <documentation>Brunei Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BOB">
+                <annotation>
+                    <documentation>Boliviano</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BRL">
+                <annotation>
+                    <documentation>Brazilian Real</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BSD">
+                <annotation>
+                    <documentation>Bahamian Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BTN">
+                <annotation>
+                    <documentation>Ngultrum</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BWP">
+                <annotation>
+                    <documentation>Pula</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BYR">
+                <annotation>
+                    <documentation>Belarussian Ruble</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="BZD">
+                <annotation>
+                    <documentation>Belize Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CAD">
+                <annotation>
+                    <documentation>Canadian Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CDF">
+                <annotation>
+                    <documentation>Franc Congolais</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CHF">
+                <annotation>
+                    <documentation>Swiss Franc</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CLP">
+                <annotation>
+                    <documentation>Chilean Peso</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CNY">
+                <annotation>
+                    <documentation>Yuan Renminbi</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="COP">
+                <annotation>
+                    <documentation>Colombian Peso</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CRC">
+                <annotation>
+                    <documentation>Costa Rican Colon</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CSD">
+                <annotation>
+                    <documentation>Serbian Dinar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CUP">
+                <annotation>
+                    <documentation>Cuban Peso</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CVE">
+                <annotation>
+                    <documentation>Cape Verde Escudo</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CYP">
+                <annotation>
+                    <documentation>Cyprus Pound</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="CZK">
+                <annotation>
+                    <documentation>Czech Koruna</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="DJF">
+                <annotation>
+                    <documentation>Djibouti Franc</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="DKK">
+                <annotation>
+                    <documentation>Danish Krone</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="DOP">
+                <annotation>
+                    <documentation>Dominican Peso</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="DZD">
+                <annotation>
+                    <documentation>Algerian Dinar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="EEK">
+                <annotation>
+                    <documentation>Kroon</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="EGP">
+                <annotation>
+                    <documentation>Egyptian Pound</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ERN">
+                <annotation>
+                    <documentation>Nakfa</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ETB">
+                <annotation>
+                    <documentation>Ethopian Birr</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="EUR">
+                <annotation>
+                    <documentation>Euro</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="FJD">
+                <annotation>
+                    <documentation>Fiji Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="FKP">
+                <annotation>
+                    <documentation>Falkland Islands Pound</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="GBP">
+                <annotation>
+                    <documentation>Pound Sterling</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="GEL">
+                <annotation>
+                    <documentation>Lari</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="GHC">
+                <annotation>
+                    <documentation>Cedi</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="GIP">
+                <annotation>
+                    <documentation>Gibraltar Pound</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="GMD">
+                <annotation>
+                    <documentation>Dalasi</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="GNF">
+                <annotation>
+                    <documentation>Guinea Franc</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="GTQ">
+                <annotation>
+                    <documentation>Quetzal</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="GYD">
+                <annotation>
+                    <documentation>Guyana Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="HKD">
+                <annotation>
+                    <documentation>Honk Kong Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="HNL">
+                <annotation>
+                    <documentation>Lempira</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="HRK">
+                <annotation>
+                    <documentation>Kuna</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="HTG">
+                <annotation>
+                    <documentation>Gourde</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="HUF">
+                <annotation>
+                    <documentation>Forint</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="IDR">
+                <annotation>
+                    <documentation>Rupiah</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ILS">
+                <annotation>
+                    <documentation>New Israeli Sheqel</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="INR">
+                <annotation>
+                    <documentation>Indian Rupee</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="IQD">
+                <annotation>
+                    <documentation>Iraqi Dinar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="IRR">
+                <annotation>
+                    <documentation>Iranian Rial</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ISK">
+                <annotation>
+                    <documentation>Iceland Krona</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="JMD">
+                <annotation>
+                    <documentation>Jamaican Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="JOD">
+                <annotation>
+                    <documentation>Jordanian Dinar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="JPY">
+                <annotation>
+                    <documentation>Yen</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="KES">
+                <annotation>
+                    <documentation>Kenyan Shilling</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="KGS">
+                <annotation>
+                    <documentation>Som</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="KHR">
+                <annotation>
+                    <documentation>Riel</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="KMF">
+                <annotation>
+                    <documentation>Comoro Franc</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="KPW">
+                <annotation>
+                    <documentation>North Korean Won</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="KRW">
+                <annotation>
+                    <documentation>Won</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="KWD">
+                <annotation>
+                    <documentation>Kuwaiti Dinar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="KYD">
+                <annotation>
+                    <documentation>Cayman Islands Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="KZT">
+                <annotation>
+                    <documentation>Tenge</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="LAK">
+                <annotation>
+                    <documentation>Kip</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="LBP">
+                <annotation>
+                    <documentation>Lebanese Pound</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="LKR">
+                <annotation>
+                    <documentation>Sri Lanka Rupee</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="LRD">
+                <annotation>
+                    <documentation>Liberian Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="LSL">
+                <annotation>
+                    <documentation>Loti</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="LTL">
+                <annotation>
+                    <documentation>Lithuanian Litas</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="LVL">
+                <annotation>
+                    <documentation>Latvian Lats</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="LYD">
+                <annotation>
+                    <documentation>Libyan Dinar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MAD">
+                <annotation>
+                    <documentation>Morrocan Dirham</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MDL">
+                <annotation>
+                    <documentation>Moldovan Leu</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MGA">
+                <annotation>
+                    <documentation>Malagasy Ariary</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MKD">
+                <annotation>
+                    <documentation>Denar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MMK">
+                <annotation>
+                    <documentation>Kyat</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MNT">
+                <annotation>
+                    <documentation>Tugrik</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MOP">
+                <annotation>
+                    <documentation>Pataca</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MRO">
+                <annotation>
+                    <documentation>Ouguiya</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MTL">
+                <annotation>
+                    <documentation>Maltese Lira</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MUR">
+                <annotation>
+                    <documentation>Mauritius Rupee</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MVR">
+                <annotation>
+                    <documentation>Rufiyaa</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MWK">
+                <annotation>
+                    <documentation>Kwacha</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MXN">
+                <annotation>
+                    <documentation>Mexican Peso</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MYR">
+                <annotation>
+                    <documentation>Malaysian Ringgit</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MZN">
+                <annotation>
+                    <documentation>Metical</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="NAD">
+                <annotation>
+                    <documentation>Namibia Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="NGN">
+                <annotation>
+                    <documentation>Naira</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="NIO">
+                <annotation>
+                    <documentation>Cordoba Oro</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="NOK">
+                <annotation>
+                    <documentation>Norwegian Krone</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="NPR">
+                <annotation>
+                    <documentation>Nepalese Rupee</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="NZD">
+                <annotation>
+                    <documentation>New Zealand Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="OMR">
+                <annotation>
+                    <documentation>Rial Omani</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="PAB">
+                <annotation>
+                    <documentation>Balboa</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="PEN">
+                <annotation>
+                    <documentation>Nuevo Sol</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="PGK">
+                <annotation>
+                    <documentation>Kina</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="PHP">
+                <annotation>
+                    <documentation>Philippine Peso</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="PKR">
+                <annotation>
+                    <documentation>Pakistan Rupee</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="PLN">
+                <annotation>
+                    <documentation>Zloty</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="PYG">
+                <annotation>
+                    <documentation>Guarani</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="QAR">
+                <annotation>
+                    <documentation>Qatari Rial</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ROL">
+                <annotation>
+                    <documentation>Leu</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="RUB">
+                <annotation>
+                    <documentation>Russian Ruble</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="RWF">
+                <annotation>
+                    <documentation>Rwanda Franc</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SAR">
+                <annotation>
+                    <documentation>Saudi Riyal</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SBD">
+                <annotation>
+                    <documentation>Solomon Islands Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SCR">
+                <annotation>
+                    <documentation>Seychelles Rupee</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SDD">
+                <annotation>
+                    <documentation>Sudanese Dinar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SEK">
+                <annotation>
+                    <documentation>Swedish Krona</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SGD">
+                <annotation>
+                    <documentation>Singapore Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SHP">
+                <annotation>
+                    <documentation>St. Helena Pound</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SIT">
+                <annotation>
+                    <documentation>Tolar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SKK">
+                <annotation>
+                    <documentation>Slovak Koruna</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SLL">
+                <annotation>
+                    <documentation>Leone</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SOS">
+                <annotation>
+                    <documentation>Somali Shilling</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SRD">
+                <annotation>
+                    <documentation>Suriname Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="STD">
+                <annotation>
+                    <documentation>Dobra</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SVC">
+                <annotation>
+                    <documentation>El Salvador Colon</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SYP">
+                <annotation>
+                    <documentation>Syrian Pound</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="SZL">
+                <annotation>
+                    <documentation>Lilangeni</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="THB">
+                <annotation>
+                    <documentation>Baht</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="TJS">
+                <annotation>
+                    <documentation>Somoni</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="TMM">
+                <annotation>
+                    <documentation>Manat</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="TND">
+                <annotation>
+                    <documentation>Tunisian Dinar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="TOP">
+                <annotation>
+                    <documentation>Pa&apos;anga</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="TRY">
+                <annotation>
+                    <documentation>New Turkish Lira</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="TTD">
+                <annotation>
+                    <documentation>Trinidad and Tobago Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="TWD">
+                <annotation>
+                    <documentation>New Taiwan Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="TZS">
+                <annotation>
+                    <documentation>Tanzanian Shilling</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="UAH">
+                <annotation>
+                    <documentation>Hryvnia</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="UGX">
+                <annotation>
+                    <documentation>Uganda Shilling</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="USD">
+                <annotation>
+                    <documentation>US Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="UYU">
+                <annotation>
+                    <documentation>Peso Uruguayo</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="UZS">
+                <annotation>
+                    <documentation>Uzbekistan Sum</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="VEB">
+                <annotation>
+                    <documentation>Bolivar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="VND">
+                <annotation>
+                    <documentation>Dong</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="VUV">
+                <annotation>
+                    <documentation>Vatu</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="WST">
+                <annotation>
+                    <documentation>Tala</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="XAF">
+                <annotation>
+                    <documentation>CFA Franc</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="XAG">
+                <annotation>
+                    <documentation>Silver</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="XAU">
+                <annotation>
+                    <documentation>Gold</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="XCD">
+                <annotation>
+                    <documentation>East Carribean Dollar</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="XDR">
+                <annotation>
+                    <documentation>SDR</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="XOF">
+                <annotation>
+                    <documentation>CFA Franc</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="XPD">
+                <annotation>
+                    <documentation>Palladium</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="XPF">
+                <annotation>
+                    <documentation>CFP Franc</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="XPT">
+                <annotation>
+                    <documentation>Platinum</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="YER">
+                <annotation>
+                    <documentation>Yemeni Rial</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ZAR">
+                <annotation>
+                    <documentation>Rand</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ZMK">
+                <annotation>
+                    <documentation>Kwacha</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="ZWD">
+                <annotation>
+                    <documentation>Zimbabwe Dollar</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+
+</schema>
+

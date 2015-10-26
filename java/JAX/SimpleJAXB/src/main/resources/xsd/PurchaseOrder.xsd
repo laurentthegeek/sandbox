@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://laurent.com/simple/v2009_09.xsd"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+        xmlns:tns="http://laurent.com/simple/v2009_09.xsd"
+        elementFormDefault="qualified">
+
+    <include schemaLocation="ISOCountryCode.xsd" />
+    <include schemaLocation="ISOCurrencyCode.xsd" />
+    <import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd" />
+
+    <!--<simpleType name="ISOCurrencyCode">
+        <restriction base="string" />
+    </simpleType>
+    <simpleType name="ISOCountryCode">
+        <restriction base="string" />
+    </simpleType>-->
+
+    <element name="listOfOrder">
+        <complexType>
+            <sequence>
+                <element name="merchant" type="tns:Merchant" maxOccurs="10" />
+                <element name="buyer" type="tns:Buyer" maxOccurs="10" />
+                <element ref="tns:purchaseOrder" maxOccurs="unbounded" />
+                <element ref="ds:Signature" minOccurs="0" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="purchaseOrder" type="tns:PurchaseOrder"/>
+
+    <complexType name="PurchaseOrder">
+        <sequence>
+            <element name="merchant" type="tns:Merchant" />
+            <element name="buyer" type="tns:Buyer"/>
+            <element name="amount" type="tns:Currency" />
+            <element name="country" type="tns:ISOCountryCode" />
+        </sequence>
+    </complexType>
+
+    <complexType name="Merchant">
+        <sequence>
+            <element name="url" type="anyURI" />
+        </sequence>
+    </complexType>
+
+    <complexType name="Buyer">
+        <sequence>
+            <element name="ip" type="tns:IPv4Address" />
+        </sequence>
+    </complexType>
+
+    <complexType name="Currency">
+        <simpleContent>
+            <extension base="decimal">
+                <attribute name="currency" type="tns:ISOCurrencyCode" />
+            </extension>
+        </simpleContent>
+    </complexType>
+
+    <simpleType name="IPv4Address">
+        <annotation>
+            <documentation>Dotted-decimal IPv4 address.</documentation>
+        </annotation>
+        <restriction base="string">
+            <pattern value="((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])"/>
+        </restriction>
+    </simpleType>
+
+</schema>

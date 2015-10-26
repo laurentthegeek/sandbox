@@ -1,0 +1,49 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app>
+    <display-name>Log4j Context Listener Sample WebApp</display-name>
+
+    <!-- Environment parameters
+    The env-entry-name element contains the name of a web application's environment entry.
+    The name is a JNDI name relative to the 'java:comp/env' context.
+    The name must be unique within a web application.
+    -->
+    <!--
+    <env-entry>
+        <description>Location of the log4j configuration file.</description>
+        <env-entry-name>log4j.url</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+    <env-entry>
+        <description>True to active log4j reload upon configuration changes (works only if URL points to a file).</description>
+        <env-entry-name>log4j.watch</env-entry-name>
+        <env-entry-type>java.lang.Boolean</env-entry-type>
+        <env-entry-value>false</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>log4j.test</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>toto</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>log4j.test2</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>titi</env-entry-value>
+    </env-entry>
+    -->
+
+    <!-- Listener -->
+    <context-param>
+        <param-name>log4j.configuration</param-name>
+        <param-value>webapp.log4j.configuration</param-value>
+    </context-param>
+    <context-param>
+        <param-name>log4j.watch</param-name>
+        <param-value>webapp.log4j.watch</param-value>
+    </context-param>
+    <listener>
+        <listener-class>servlet.Log4jContextListener</listener-class>
+    </listener>
+
+</web-app>
